@@ -71,9 +71,6 @@ Neither may be your custom decodeFn function if it is doing a database lookup fo
 production setup it is highly recommended to put thubmnailing of images behind some sort of proxy/cache. 
 Viable options include:
 
-- Enabling the integrated disk-based cache provided by Connect-Thumbs. You can do this by passing custom `tmpCacheTTL`
-configuration variable when initializing Thumbs. This variable is set in seconds and is 0 by default. Setting it 
-to values greater than 0 enables caching.
 - Put [Varnish](https://www.varnish-cache.org/) in front of the thumbnail URLs
 - Use a robust CDN such as [Amazon's CloudFront](http://aws.amazon.com/cloudfront/)
 - Pick your own poison.
@@ -84,7 +81,6 @@ to values greater than 0 enables caching.
 ```
     app.use(thumbs({
       "ttl": 7200
-    , "tmpCacheTTL": 86400
     , "tmpDir": "/tmp/mynodethumbnails"
     , "decodeFn": someModule.loadImageUrlFromDbById
     , "allowedExtensions": ['png', 'jpg']
@@ -108,7 +104,6 @@ to values greater than 0 enables caching.
 where:
 
  * ttl - is the client-side cache duration that will be returned in the HTTP headers for the resulting thumbnail.
- * tmpCacheTTL - time (in seconds) to cache thumbnails in temp folder. Defaults to 0 (cache disabled).
  * tmpDir - is the Node-writable temp folder where file operations will be performed. Defaults to: `/tmp/nodethumbnails`. 
    You may want to periodically clean-up that folder.
  * decodeFn - custom decoder function. Defaults to one that decodes base64-encoded full URLs.
