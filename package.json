@@ -1,29 +1,31 @@
 {
-  "author": {
-    "name": "Irakli Nadareishvili"
-  , "url": "http://freshblurbs.com"
-  }
-  , "name": "connect-thumbs"
-  , "description": "Image thumbnailing middleware for Connect."
-  , "keywords": ["thumbnail", "imagemagick", "thumb", "photos", "crop", "resize", "connect", "middleware"]
-  , "version": "0.1.7"
-  , "repository": {
-      "type": "git"
-    , "url": "git@github.com:inadarei/connect-thumbs.git"
-  }
-  , "main": "./index.js"
-  , "licenses": [ {
-      "type": "MIT"
-    , "url": "http://www.opensource.org/licenses/MIT"
-  } ]
-  , "dependencies": {
-      "request"            : "2.x"
-    , "send"               : "0.x"
-    , "mkdirp"             : "0.x"
-    , "imagemagick"        : "0.x"
-  }
-  , "devDependencies": {"connect": "*"}
-  , "engines": {
-      "node": "*"
-  }
+    "author": {
+        "name": "Irakli Nadareishvili",
+        "url": "http://freshblurbs.com"
+    },
+    "name": "connect-thumbs",
+    "description": "Image thumbnailing middleware for Connect.",
+    "keywords": ["thumbnail", "imagemagick", "thumb", "photos", "crop", "resize", "connect", "middleware"],
+    "version": "0.1.7",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:inadarei/connect-thumbs.git"
+    },
+    "main": "./index.js",
+    "licenses": [{
+        "type": "MIT",
+        "url": "http://www.opensource.org/licenses/MIT"
+    }],
+    "dependencies": {
+        "request": "2.x",
+        "send": "0.x",
+        "mkdirp": "0.x",
+        "imagemagick": "0.x"
+    },
+    "devDependencies": {
+        "connect": "*"
+    },
+    "engines": {
+        "node": "*"
+    }
 }
